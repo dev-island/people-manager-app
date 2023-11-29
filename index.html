@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People Manager</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="container m-auto">
+    <h1 class="text-4xl py-5">JS Tutorial</h1>
+
+    <section id="peopleModule">
+      <header class="text-2xl">People</header>
+      <form id="addPerson" class="grid grid-cols-3 my-4">
+        <input
+          type="text"
+          placeholder="name"
+          name="name"
+          class="outline-none text-lg col-span-2 p-2 border border-solid border-blue-300 rounded-tl-md rounded-bl-md"
+        />
+        <button
+          type="submit"
+          class="p-2 border text-lg border-solid border-blue-300 bg-blue-500 hover:bg-blue-700 text-white transition-colors rounded-tr-md rounded-br-md"
+        >
+          Add Person
+        </button>
+      </form>
+
+      <ul id="peopleList" class="flex flex-wrap gap-3"></ul>
+    </section>
+
+    <template id="personTemplate">
+      <li
+        class="center relative space-x-2 inline-block select-none whitespace-nowrap rounded-lg bg-pink-500 py-2 px-3.5 align-baseline font-sans text-xs font-bold leading-none text-white"
+      >
+        <span class="name"></span>
+        <i
+          class="del cursor-pointer transition-colors hover:bg-pink-600 rounded-full inline-grid p-2 place-content-center"
+          >X</i
+        >
+      </li>
+    </template>
+
+    <script src="./modules/revealing-module.js"></script>
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>
